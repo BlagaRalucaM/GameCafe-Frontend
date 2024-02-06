@@ -1,0 +1,31 @@
+<div class="content" fxLayout="row wrap" fxLayoutGap="16px grid">
+    <div
+      [fxFlex]="100 / gridColumns + '%'"
+      fxFlex.xs="100%"
+      fxFlex.sm="33%"
+      *ngFor="let user of users"
+      class="users-div"
+    >
+      <mat-card class="user-card mat-elevation-z4">
+        <mat-card-header>
+          <mat-card-title
+            >{{ user.firstName }} {{ user.lastName }}</mat-card-title
+          >
+        </mat-card-header>
+        <img
+          mat-card-image
+          src="https://i.pinimg.com/1200x/8b/16/7a/8b167af653c2399dd93b952a48740620.jpg"
+          width="250"
+          height="250"
+        />
+        <mat-card-content>
+          <p>{{ user.email }}</p>
+        </mat-card-content>
+        <mat-card-actions>
+          <!-- <button mat-button>LIKE</button> -->
+          <!-- <button mat-button>SHARE</button> -->
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+  

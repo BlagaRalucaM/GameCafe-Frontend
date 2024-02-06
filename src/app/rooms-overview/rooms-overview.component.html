@@ -1,0 +1,31 @@
+<div class="content" fxLayout="row wrap" fxLayoutGap="16px grid">
+    <div
+      [fxFlex]="100 / gridColumns + '%'"
+      fxFlex.xs="100%"
+      fxFlex.sm="33%"
+      *ngFor="let room of rooms"
+      class="rooms-div"
+    >
+      <mat-card class="room-card mat-elevation-z4">
+        <mat-card-header>
+          <mat-card-title
+            >{{ room.roomNumber }}</mat-card-title
+          >
+        </mat-card-header>
+        <img
+          mat-card-image
+          src="https://png.pngtree.com/png-clipart/20191120/original/pngtree-rooms-icon-isolated-on-abstract-background-png-image_5077124.jpg"
+          width="250"
+          height="250"
+        />
+        <mat-card-content>
+          <p>{{ room.gameType }}</p>
+        </mat-card-content>
+        <mat-card-actions>
+          <!-- <button mat-button>LIKE</button>
+          <button mat-button>SHARE</button> -->
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+  

@@ -1,0 +1,31 @@
+<div class="content" fxLayout="row wrap" fxLayoutGap="16px grid">
+    <div
+      [fxFlex]="100 / gridColumns + '%'"
+      fxFlex.xs="100%"
+      fxFlex.sm="33%"
+      *ngFor="let booking of bookings"
+      class="bookings-div"
+    >
+      <mat-card class="booking-card mat-elevation-z4">
+        <mat-card-header>
+          <mat-card-title
+            >{{ booking.user }}</mat-card-title
+          >
+        </mat-card-header>
+        <img
+          mat-card-image
+          src="https://www.clipartmax.com/png/middle/110-1108218_managment-booking-calendar-check-icon.png"
+          width="250"
+          height="250"
+        />
+        <mat-card-content>
+          <p>{{ booking.room }}</p>
+        </mat-card-content>
+        <mat-card-actions>
+          <!-- <button mat-button>LIKE</button> -->
+          <!-- <button mat-button>SHARE</button> -->
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+  
